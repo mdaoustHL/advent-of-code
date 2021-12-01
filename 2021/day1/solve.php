@@ -24,7 +24,7 @@
      * To do this, count the number of times a depth measurement increases from the previous measurement. (There is no measurement before the first measurement.)
     **/
 
-    require_once "../../common/functions.php";
+    require_once "../../common/php/functions.php";
 
     /**
      * Reads in the input.txt file and returns the data in an array.

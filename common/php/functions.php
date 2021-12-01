@@ -1,6 +1,6 @@
 <?php
     /**
-     * Common functions live here
+     * Common PHP functions live here
      */
 
     function welcome($day, $year, $puzzleTitle) {
