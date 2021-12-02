@@ -26,30 +26,11 @@
 
     require_once "../../common/php/functions.php";
 
-    /**
-     * Reads in the input.txt file and returns the data in an array.
-     */
-    function loadInput() {
-        $data = [];
-
-        if ($file = fopen('./input.txt', 'r')) {
-            while (($line = fgets($file)) !== false) {
-                array_push($data, intval($line));
-            }
-        }
-        fclose($file);
-
-        $dataPoints = sizeof($data);
-        output("Input file loaded. ${dataPoints} datapoints loaded.", 1);
-
-        return $data;
-    }
-
     function countIncreases($dataPoints = []) {
         $increases = 0;
 
         for ($i = 1; $i < sizeof($dataPoints); $i++) {
-            if ($dataPoints[$i] > $dataPoints[$i - 1]) {
+            if (intval($dataPoints[$i]) > intval($dataPoints[$i - 1])) {
                 $increases++;
             }
         }
@@ -75,7 +56,7 @@
          */
         $sliding3Sums = [];
         for ($i = 2; $i < $depthsCount; $i++) {
-            $sum3 = $depths[$i] + $depths[$i - 1] + $depths[$i - 2];
+            $sum3 = intval($depths[$i]) + intval($depths[$i - 1]) + intval($depths[$i - 2]);
             array_push($sliding3Sums, $sum3);
         }
         $sliding3SumsCount = sizeof($sliding3Sums);

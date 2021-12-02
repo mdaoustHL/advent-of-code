@@ -16,4 +16,23 @@
             $newlines--;
         }
     }
+
+    /**
+     * Reads in the input.txt file and returns the data in an array.
+     */
+    function loadInput() {
+        $data = [];
+
+        if ($file = fopen('./input.txt', 'r')) {
+            while (($line = fgets($file)) !== false) {
+                array_push($data, $line);
+            }
+        }
+        fclose($file);
+
+        $dataPoints = sizeof($data);
+        output("Input file loaded. ${dataPoints} datapoints loaded.", 1);
+
+        return $data;
+    }
 ?>
