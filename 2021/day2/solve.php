@@ -16,7 +16,7 @@
      */
 
     require_once "../../common/php/functions.php";
-    require_once "../../common/php/Submarine.php";
+    require_once "../common/Submarine.php";
 
     /**
      * Entry point
