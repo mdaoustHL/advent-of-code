@@ -133,8 +133,6 @@
         output("CO2 Scrubber Rating: ${co2ScrubberRating}");
         output("CO2 Scrubber Rating (decimal): ${co2ScrubberRatingDec}", 2);
         output("Part 2 Result: ${result}", 1);
-
-
     }
     main();
 
