@@ -39,7 +39,7 @@
         output("Part 1 Result: ${part1Result} fish after 80 days.", 2);
 
         // Part 2
-        $aquarium = loadAquarium(); ini_set("memory_limit", "14000000000"); // 12GB
+        $aquarium = loadAquarium(); ini_set("memory_limit", "14000000000"); // 14GB - Doesn't work, script still uses too much memory => OOM error
         output("Simulating 256 days...", 1);
 
         for ($day = 1; $day <=256; $day++) {
@@ -58,7 +58,7 @@
         }
 
         $part1Result = sizeof($aquarium);
-        output("Part 2 Result: ${part1Result} fish after 80 days.", 2);
+        output("Part 2 Result: ${part1Result} fish after 256 days.", 2); // If you can get here, congrats! I haven't lol
 
     }
     main();
